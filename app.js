@@ -1,4 +1,6 @@
-//alert("test");
+//alert("test"
+
+
 
 //input variables
 const nameInput = document.getElementById('name-input');
@@ -29,11 +31,17 @@ sendButton.addEventListener('click', ()=>{
 
     
 resetButton.addEventListener('click', ()=>{
-    
+    nameInput.value="";
+    emailInput.value="";
+    messageInput.value="";    
 });
 clearStorage.addEventListener('click', ()=>{
+    localStorage.clear();
 
 });
-recallStorage.addEventListener('click', ()=>{
-
+recallStorage.addEventListener('load', ()=>{
+    alert('test')
+    nameInput.value = JSON.parse(localStorage.name);
+    emailInput.value = JSON.parse(localStorage.email);
+    messageInput.value = JSON.parse(localStorage.email);
 });
